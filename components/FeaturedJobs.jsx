@@ -3,35 +3,37 @@ import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 const FeaturedJobs = () => {
-  
+
   const featuredJobs = [
     {
       companyName: "Facebook",
       job: "Software Engineer",
       salary: "$180,000",
-      location: "Accra, Ghana",
-      Available:"Offilne"
+      location: "Accra, Ghana"
     },
     {
       companyName: "Google",
       job: "Frontend Developer",
       salary: "$160,000",
-      location: "Texas, USA",
-      Available:"Online"
+      location: "Texas, USA"
     },
     {
       companyName: "Amazon",
       job: "Sales Man",
       salary: "$200,000",
-      location: "Alabama, USA",
-      Available:"Offilne "
+      location: "Alabama, USA"
     },
     {
-      companyName: "Skylow Multimedia",
-      job: "Video Editor",
-      salary: "$240,000",
-      location: "Accra, Ghana",
-      Available:"Online"
+    companyName: "Sky's Multimedia",
+    job: "Owner",
+    salary: "$600,000",
+    location: "Accra, Ghana"
+  },
+    {
+      companyName: "Bessie's Nutrix",
+      job: "CEO",
+      salary: "$400,000",
+      location: "Accra, Ghana"
     }
   ];
 
@@ -39,7 +41,16 @@ const FeaturedJobs = () => {
     "Software Engineer": "facebook",
     "Frontend Developer": "google",
     "Sales Man": "amazon",
-    "Video Editor":"camera"
+    "Owner":"camera",
+    "CEO":"heartbeat"
+  };
+
+  const jobColors = {
+    "Software Engineer": "#4c669f",
+    "Frontend Developer": "#ff7e5f",
+    "Sales Man": "#43cea2",
+    "Owner":"#92f",
+    "CEO":"#4CAF50"
   };
 
   return (
@@ -51,10 +62,13 @@ const FeaturedJobs = () => {
       <FlatList 
         data={featuredJobs}
         renderItem={({ item, index }) => (
-          <View style={[
-            styles.featuredJobContainer,
-            index > 0 && styles.additionalStyle,
-          ]}>
+          <View
+            style={[
+              styles.featuredJobContainer,
+              { backgroundColor: jobColors[item.job] }, 
+              index > 0 && styles.additionalStyle,
+            ]}
+          >
             <View style={styles.firstSection}>
               <View style={styles.iconBox}>
                 <FontAwesome5 name={jobIcons[item.job]} size={24} color="#2666CF" />
@@ -64,13 +78,10 @@ const FeaturedJobs = () => {
                 <Text style={styles.secondSectionTextTwo}>{item.companyName}</Text>
               </View>
             </View>
-            
             <View style={styles.thirdSection}>
               <Text style={{color:"#000"}}>{item.salary}</Text>
               <Text style={{color:"#000"}}>{item.location}</Text>
-              <Text style={{color:"red"}}>{item.Available}</Text>
             </View>
-            
           </View>
         )}
         horizontal
@@ -101,17 +112,16 @@ const styles = StyleSheet.create({
     color: "#8C92AC"
   },
   featuredJobContainer: {
-    backgroundColor: "#F5F5F5",
     width: 300,
     borderRadius: 15,
     marginTop: 15,
+    padding: 15, // Added padding to ensure content is not touching edges
   },
   additionalStyle: {
     marginLeft: 20
   },
   firstSection: {
     flexDirection: "row",
-    padding: 15
   },
   iconBox: {
     backgroundColor: "#FFFFFF",
@@ -122,18 +132,18 @@ const styles = StyleSheet.create({
     marginLeft: 10
   },
   secondSectionTextOne: {
-    color: "#000",
+    color: "#fff",
     fontSize: 16,
     fontWeight: "bold"
   },
   secondSectionTextTwo: {
-    color: "#000",
+    color: "#fff",
     marginTop: 5
   },
   thirdSection: {
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: 10,
-    marginTop: 90
+    marginTop: 100 // Reduced margin to adjust for padding
   }
 });
