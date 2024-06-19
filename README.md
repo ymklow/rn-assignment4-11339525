@@ -1,4 +1,4 @@
-ID: 11339525
+
 DisplayName Component
 Description:
 This component displays the user's name and email. If the user is not logged in, it shows a login prompt with a button to navigate to the login page.
