@@ -7,7 +7,7 @@ const DisplayName = ({userName,email}) => {
     <View style={styles.header}>
       <View>
         <View style={{flexDirection:"row"}}>
-          <Text style={styles.headerText}>{userName ? userName:"No User"}</Text>
+          <Text style={styles.headerText}>{userName ? userName:"Login to display name"}</Text>
           { !userName ? 
           (<TouchableOpacity style={styles.logInBtn} onPress={()=>router.push('/login')}>
             <Text style={{color:"#FFFFFF",textAlign:"center",fontSize: 17}}>Log In</Text>
@@ -15,7 +15,7 @@ const DisplayName = ({userName,email}) => {
           ):""
           }
         </View>
-        <Text style={styles.subHeaderText}>{email ? email : "No email provided"}</Text>
+        <Text style={styles.subHeaderText}>{email ? email : "example@gmail.com"}</Text>
       </View>
       <View style={styles.redText}>
         <Text></Text>
