@@ -24,7 +24,7 @@ const FeaturedJobs = () => {
       job: "Sales Man",
       salary: "$200,000",
       location: "Alabama, USA",
-      Available:"Offilne"
+      Available:"Offilne "
     },
     {
       companyName: "Skylow Multimedia",
