@@ -1,50 +1,66 @@
-# Welcome to your Expo app 👋
+ID: 11339525
+DisplayName Component
+Description:
+This component displays the user's name and email. If the user is not logged in, it shows a login prompt with a button to navigate to the login page.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Key Features:
 
-## Get started
+Shows user's name and email if logged in.
+Displays a "Login to display name" message and a "Log In" button if the user is not logged in.
+Uses the useRouter hook from expo-router for navigation.
+FeaturedJobs Component
+Description:
+This component displays a horizontal list of featured jobs with specific job details like the company name, job title, salary, and location. Each job card has a unique background color and an icon representing the job type.
 
-1. Install dependencies
+Key Features:
 
-   ```bash
-   npm install
-   ```
+Renders a list of job cards horizontally.
+Each job card has a unique background color and icon.
+Job details include the company name, job title, salary, and location.
+Uses the FontAwesome5 icons library for job-specific icons.
+Footer Component
+Description:
+This component provides a footer section with alternative login options (Apple, Google, Facebook) and a registration link.
 
-2. Start the app
+Key Features:
 
-   ```bash
-    npx expo start
-   ```
+Displays alternative login options using icons.
+Includes a horizontal line separator and text indicating "Or continue with".
+Provides a registration link.
+loginForm Component
+Description:
+This component renders a login form with input fields for the user's name and email. Upon submission, it navigates to the home page with the user's details if both fields are filled.
 
-In the output, you'll find options to open the app in a
+Key Features:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Input fields for user name and email.
+A "Log in" button that validates the input and navigates to the home page with the provided details.
+Uses the useRouter hook from expo-router for navigation.
+PopularJobs Component
+Description:
+This component displays a vertical list of popular jobs with details such as job title, company name, salary, and location. Each job card includes an icon representing the job type.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Key Features:
 
-## Get a fresh project
+Renders a vertical list of job cards.
+Each job card displays the job title, company name, salary, and location.
+Uses the FontAwesome5 icons library for job-specific icons.
+SearchBar Component
+Description:
+This component provides a search bar for users to search for jobs or positions and includes a filter button for additional search criteria.
 
-When you're ready, run:
+Key Features:
 
-```bash
-npm run reset-project
-```
+Search input field with a placeholder text.
+Search icon within the input field.
+Filter button for advanced search options.
+Uses the Ionicons icons library.
+Welcome Component
+Description:
+This component displays a welcome message for users when they access the app, encouraging them to log in and apply for jobs.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Key Features:
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Displays the app name "Jobizz".
+Shows a welcome message with an emoji.
+Encourages users to log in and apply for jobs.
